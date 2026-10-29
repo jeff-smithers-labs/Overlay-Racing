@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Overlay Racing</title>
+<meta name="description" content="Value selections for UK and Irish horse racing, backed by tested data and an independently proofed record. Join the waiting list.">
+<style>
+  :root {
+    --bg: #f6f4ee;
+    --card: #ffffff;
+    --ink: #1c2420;
+    --muted: #5b655f;
+    --brand: #1f5c3f;
+    --brand-ink: #ffffff;
+    --line: #dcd8cc;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121714;
+      --card: #1b221e;
+      --ink: #eef1ed;
+      --muted: #a6b0a9;
+      --brand: #3f9a6c;
+      --brand-ink: #0c120f;
+      --line: #2c3530;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+  header { padding: 56px 0 32px; }
+  .logo { font-weight: 800; letter-spacing: 0.02em; color: var(--brand); font-size: 20px; }
+  h1 { font-size: clamp(30px, 6vw, 44px); line-height: 1.15; margin: 20px 0 16px; }
+  .lead { font-size: 19px; color: var(--muted); margin: 0 0 28px; }
+  h2 { font-size: 24px; margin: 0 0 12px; }
+  section { padding: 32px 0; border-top: 1px solid var(--line); }
+  ul { padding-left: 20px; margin: 0; }
+  li { margin: 8px 0; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 24px;
+  }
+  form { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+  input[type=email], input[type=text] {
+    flex: 1 1 220px;
+    padding: 12px 14px;
+    font-size: 16px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--bg);
+    color: var(--ink);
+  }
+  button {
+    flex: 0 0 auto;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    border: 0;
+    border-radius: 8px;
+    background: var(--brand);
+    color: var(--brand-ink);
+    cursor: pointer;
+  }
+  .small { font-size: 14px; color: var(--muted); }
+  .msg { margin-top: 12px; font-weight: 600; }
+  footer { padding: 32px 0 48px; border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="logo">OVERLAY RACING</div>
+  <!-- Backup headline Jeff liked (29/10/2026): "Bet on value. We'll do the form study." -->
+  <h1>Bet on value. The form study's done for you.</h1>
+  <p class="lead">Value selections for punters, backed by years of tested data and a record you can check.</p>
+  <div class="card" id="join">
+    <strong>Join the waiting list</strong>
+    <p style="margin:6px 0 0"><strong>Join now and get one free selection a day</strong>, on days we have one, until the proofing period is complete. After that, subscribe and become a member for access to all selections.</p>
+    <p class="small" style="margin:4px 0 0">Membership will be capped. The waiting list hears first when places open.</p>
+    <!-- Sign-ups go to Kit. Put Jeff's Kit form number in data-kit-form once his account is set up. -->
+    <form id="waitlist" data-kit-form="" method="post">
+      <input type="text" name="fields[first_name]" placeholder="First name" aria-label="First name">
+      <input type="email" name="email_address" placeholder="Email address" aria-label="Email address" required>
+      <button type="submit">Join</button>
+    </form>
+    <div class="msg" id="waitlist-msg" role="status"></div>
+  </div>
+</header>
+
+<section>
+  <h2>Why Overlay Racing</h2>
+  <p>Finding value in racing takes time and form study, every day. Overlay Racing does the work for you, so you can keep betting your way, with value on your side.</p>
+</section>
+
+<section>
+  <h2>What members get</h2>
+  <ul>
+    <li><strong>Selections in good time before racing</strong>, the night before if the early prices are right, otherwise on the day, each with a minimum price and a stake in points. Only on days something meets the criteria. No filler bets.</li>
+    <li><strong>A short write-up with every pick</strong>, giving the real reasoning behind it.</li>
+    <li><strong>A recommended bank size and staking plan</strong>, tested on years of data.</li>
+    <li><strong>Every method tested on years of race data before it's used.</strong></li>
+    <li><strong>About ten minutes a day</strong> to read your selections and place your bets.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>A record you can check</h2>
+  <p>Every selection is proofed by an independent proofing service, not connected to or controlled by Overlay Racing. The full record includes every loser, at the advised price and at Betfair SP.</p>
+  <p>Before membership opens, there will be 90 days of independent proofing. No one is charged anything during that time.</p>
+</section>
+
+<section>
+  <h2>When membership opens</h2>
+  <ul>
+    <li>Monthly, quarterly and yearly options, with the longer ones cheaper.</li>
+    <li>Capped numbers, so selections stay bettable. The cap is set from the data, not guessed.</li>
+    <li><strong>Three-month promise:</strong> follow every selection at the advised price and stake for three months. If you're not in profit, your next three months are free.</li>
+  </ul>
+  <!-- Stripe payment buttons go here after the 90 days of proofing. -->
+  <p class="small">The price will be announced when proofing ends, so you can judge it against a real record.</p>
+</section>
+
+<section>
+  <h2>Who's behind it</h2>
+  <p>I'm Jeff. I've been around racing and betting for over 20 years. I've made my share of mistakes in that time, and learned a lot from them. Overlay Racing is the service I wish I'd had: selections on value, a proper staking plan, and every result on show.</p></section>
+
+<section>
+  <div class="card">
+    <strong>Join the waiting list</strong>
+    <p class="small" style="margin:6px 0 0">One free selection a day, on days we have one, until the proofing period is complete, and first word when places open. Unsubscribe any time.</p>
+    <p style="margin:12px 0 0"><a href="#join">Back to the sign-up form ↑</a></p>
+  </div>
+</section>
+
+<footer>
+  <p><strong>18+ only.</strong> Betting carries risk. Past results are no promise of future results, and you can lose money. Only bet what you can afford to lose.</p>
+  <p>For free, confidential help: <a href="https://www.begambleaware.org" rel="noopener">BeGambleAware.org</a> or call the National Gambling Helpline on 0808 8020 133.</p>
+  <p>© Overlay Racing</p>
+</footer>
+
+</div>
+<script>
+  (function () {
+    var form = document.getElementById('waitlist');
+    var msg = document.getElementById('waitlist-msg');
+    var kitForm = form.getAttribute('data-kit-form');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!kitForm) {
+        msg.textContent = 'Sign-ups open very soon. Please check back shortly.';
+        return;
+      }
+      msg.textContent = 'Sending…';
+      fetch('https://app.kit.com/forms/' + kitForm + '/subscriptions', {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(function (r) {
+        if (!r.ok) throw new Error();
+        form.reset();
+        msg.textContent = "You're on the list. Check your inbox to confirm your email.";
+      }).catch(function () {
+        msg.textContent = 'Something went wrong. Please try again in a minute.';
+      });
+    });
+  })();
+</script>
+</body>
+</html>

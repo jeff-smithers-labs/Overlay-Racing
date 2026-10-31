@@ -7,23 +7,27 @@
 <meta name="description" content="Value selections for UK and Irish horse racing, backed by tested data and an independently proofed record. Join the waiting list.">
 <style>
   :root {
-    --bg: #f6f4ee;
+    --bg: #f4f6f9;
     --card: #ffffff;
-    --ink: #1c2420;
-    --muted: #5b655f;
-    --brand: #1f5c3f;
+    --ink: #172033;
+    --muted: #586174;
+    --brand: #1d3f72;
     --brand-ink: #ffffff;
-    --line: #dcd8cc;
+    --line: #d8dde6;
+    --join-bg: #e3ebf7;
+    --turf: #2f8a3a;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #121714;
-      --card: #1b221e;
-      --ink: #eef1ed;
-      --muted: #a6b0a9;
-      --brand: #3f9a6c;
-      --brand-ink: #0c120f;
-      --line: #2c3530;
+      --bg: #10141c;
+      --card: #181e29;
+      --ink: #eceff5;
+      --muted: #a3abba;
+      --brand: #6f9fe0;
+      --brand-ink: #0b0f16;
+      --line: #2a3140;
+      --join-bg: #1c2a42;
+      --turf: #5cbf63;
     }
   }
   * { box-sizing: border-box; }
@@ -35,7 +39,7 @@
   }
   .wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
   header { padding: 56px 0 32px; }
-  .logo { font-weight: 800; letter-spacing: 0.02em; color: var(--brand); font-size: 20px; }
+  .logo { font-weight: 800; letter-spacing: 0.02em; color: var(--turf); font-size: 20px; }
   h1 { font-size: clamp(30px, 6vw, 44px); line-height: 1.15; margin: 20px 0 16px; }
   .lead { font-size: 19px; color: var(--muted); margin: 0 0 28px; }
   h2 { font-size: 24px; margin: 0 0 12px; }
@@ -43,8 +47,8 @@
   ul { padding-left: 20px; margin: 0; }
   li { margin: 8px 0; }
   .card {
-    background: var(--card);
-    border: 1px solid var(--line);
+    background: var(--join-bg);
+    border: 1px solid var(--brand);
     border-radius: 12px;
     padding: 24px;
   }
@@ -71,6 +75,15 @@
   }
   .small { font-size: 14px; color: var(--muted); }
   .msg { margin-top: 12px; font-weight: 600; }
+  #join { background: var(--join-bg); border: 2px solid var(--brand); }
+  #join input { background: var(--card); }
+  h3 { font-size: 17px; margin: 0 0 6px; }
+  .fit { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .fit > div { background: var(--join-bg); border: 1px solid var(--brand); border-radius: 12px; padding: 18px 20px; }
+  .record { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 8px 0 12px; }
+  .record > div { border: 1px solid var(--brand); border-radius: 10px; padding: 14px 10px; text-align: center; background: var(--join-bg); }
+  .record .num { display: block; font-size: 26px; font-weight: 800; color: var(--brand); }
+  .record .lbl { display: block; font-size: 13px; color: var(--muted); }
   footer { padding: 32px 0 48px; border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); }
   footer a { color: var(--muted); }
 </style>
@@ -88,7 +101,7 @@
     <p style="margin:6px 0 0"><strong>Join now and get one free selection a day</strong>, on days we have one, until the proofing period is complete. After that, subscribe and become a member for access to all selections.</p>
     <p class="small" style="margin:4px 0 0">Membership will be capped. The waiting list hears first when places open.</p>
     <!-- Sign-ups go to Kit. Put Jeff's Kit form number in data-kit-form once his account is set up. -->
-    <form id="waitlist" data-kit-form="" method="post">
+    <form id="waitlist" data-kit-form="10125512" method="post">
       <input type="text" name="fields[first_name]" placeholder="First name" aria-label="First name">
       <input type="email" name="email_address" placeholder="Email address" aria-label="Email address" required>
       <button type="submit">Join</button>
@@ -105,18 +118,47 @@
 <section>
   <h2>What members get</h2>
   <ul>
-    <li><strong>Selections in good time before racing</strong>, the night before if the early prices are right, otherwise on the day, each with a minimum price and a stake in points. Only on days something meets the criteria. No filler bets.</li>
+    <li><strong>Selections by email and Telegram, in good time before racing</strong>, the night before if the early prices are right, otherwise on the day, each with a minimum price and a stake in points. Only on days something meets the criteria. No filler bets.</li>
     <li><strong>A short write-up with every pick</strong>, giving the real reasoning behind it.</li>
-    <li><strong>A recommended bank size and staking plan</strong>, tested on years of data.</li>
+    <li><strong>A recommended bank size and staking plan.</strong></li>
     <li><strong>Every method tested on years of race data before it's used.</strong></li>
     <li><strong>About ten minutes a day</strong> to read your selections and place your bets.</li>
   </ul>
 </section>
 
 <section>
+  <h2>Is this for you?</h2>
+  <div class="fit">
+    <div>
+      <h3>Probably yes, if you…</h3>
+      <ul>
+        <li>want to bet on value and think long term</li>
+        <li>are happy to follow a staking plan and bet to points</li>
+        <li>would rather have fewer, better bets</li>
+        <li>want to see every result, losers included</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Probably not, if you…</h3>
+      <ul>
+        <li>want a bet in every race, every day</li>
+        <li>are after a big-priced long shot to change your week</li>
+        <li>can't sit through a losing run, because every method has them</li>
+        <li>plan to pick and choose which selections to follow</li>      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
   <h2>A record you can check</h2>
+  <div class="record">
+    <div><span class="num">0</span><span class="lbl">Selections proofed</span></div>
+    <div><span class="num">–</span><span class="lbl">Strike rate</span></div>
+    <div><span class="num">–</span><span class="lbl">Return at Betfair SP</span></div>
+  </div>
+  <p class="small">Independent proofing starts soon. These figures will fill in as every selection is settled, winners and losers alike.</p>
   <p>Every selection is proofed by an independent proofing service, not connected to or controlled by Overlay Racing. The full record includes every loser, at the advised price and at Betfair SP.</p>
-  <p>Before membership opens, there will be 90 days of independent proofing. No one is charged anything during that time.</p>
+  <p>Before membership opens, there will be 90 days of independent proofing. No one is charged anything during that time. After that, the record keeps growing. Join when it's long enough for you, whether that's three months, six or twelve.</p>
 </section>
 
 <section>
@@ -132,7 +174,9 @@
 
 <section>
   <h2>Who's behind it</h2>
-  <p>I'm Jeff. I've been around racing and betting for over 20 years. I've made my share of mistakes in that time, and learned a lot from them. Overlay Racing is the service I wish I'd had: selections on value, a proper staking plan, and every result on show.</p></section>
+  <p>I'm Jeff. I started betting for a few extra quid on the side, then found a real passion for horse racing, with the betting an extra interest. Over time, I found that picking the horse I fancied off the racecard sometimes worked, but more often didn't, and I lost some money.</p>
+  <p>So I learned from it: how I bet, how much, and on what. I became far more selective, then turned to the numbers, treating racing as a science. That research, with discipline and careful analysis, has been the bedrock of my betting for 25 years.</p>
+  <p>Overlay Racing is the service I wish I'd had: selections on value, a proper staking plan, and every result on show.</p></section>
 
 <section>
   <div class="card">
